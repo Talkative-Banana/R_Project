@@ -1,0 +1,77 @@
+VariableName,VariableCode,Type_Of_Variable,Unit_Of_Measure,Scaling_Factor,Aggregation_Type,Weighing_Varible_ID,Weighing_Variable_Name,Long_Description
+Country,Country,Key Identifier,,0,,,,Country
+State LGD Code,StateCode,Key Identifier,,0,,,,State LGD Code
+State,StateName,Key Identifier,,0,,,,State
+District LGD Code,DistrictCode,Key Identifier,,0,,,,District LGD Code
+District,DistrictName,Key Identifier,,0,,,,District
+YearCode,YearCode,Key Identifier,"",0,,"","",YearCode
+Year,Year,Key Identifier,"",0,,"","",Year
+MonthCode,MonthCode,Key Identifier,"",0,,"","",MonthCode
+Month,Month,Key Identifier,"",0,,"","",Month
+Surface Water Station,D7064_3,Key Identifier,"",0,,"","",Surface Water Station
+Surface Water Station Latitude,D7064_4,Key Identifier,"",0,,"","",Surface Water Station Latitude
+Surface Water Station Longitude,D7064_5,Key Identifier,"",0,,"","",Surface Water Station Longitude
+Dichlorophenoxyacetic-acid,I7064_8,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Dichlorophenoxyacetic-acid (24D) in surface water
+Silver,I7064_9,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Silver (Ag) in surface water
+Aluminium,I7064_10,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Aluminium (Al) in surface water
+Aldrin,I7064_11,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Aldrin in surface water
+Alkalinity-Phenolphthalein,I7064_12,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Alkalinity-Phenolphthalein in surface water
+Arsenic,I7064_13,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Arsenic (As) in surface water
+Boron,I7064_14,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Boron (B) in surface water
+Biochemical Oxygen Demand,I7064_15,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Biochemical Oxygen Demand in surface water
+cyanides,I7064_16,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Cyanides (CN) in surface water
+Carbonate,I7064_17,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Carbonate (CO3) in surface water
+Calcium,I7064_18,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Calcium (Ca) in surface water
+Cadimum,I7064_19,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Cadimum (Cd) in surface water
+Chemical Oxygen Demand,I7064_20,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Chemical Oxygen Demand in surface water
+Chlorophyll-a,I7064_21,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Chlorophyll-a in surface water
+Chloride,I7064_22,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Chloride (Cl) in surface water
+Chromium,I7064_24,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Chromium (Cr) in surface water
+Copper,I7064_25,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Copper (Cu) in surface water
+Disolved Oxygen,I7064_26,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Disolved Oxygen (DO) in surface water
+Disolved Oxygen Saturation,I7064_27,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Disolved Oxygen Saturation (DO_SATURATION) in surface water
+Dichlorodiphenyltrichloroethane,I7064_28,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Dichlorodiphenyltrichloroethane in surface water
+Dieldrin,I7064_29,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Dieldrin in surface water
+Conductivity,I7064_30,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Electrical Conductivity in surface water
+Endosulfan,I7064_31,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Endosulfan in surface water
+Fluorine,I7064_32,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Fluorine (F) in surface water
+Faecal Coliform-MPN,I7064_33,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Faecal Coliform-MPN in surface water
+Iron,I7064_34,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Iron (Fe) in surface water
+Hardness Calcium,I7064_35,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Hardness Calcium in surface water
+Hardness Total,I7064_36,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Hardness Total in surface water
+Hydrogencarbonate,I7064_37,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Hydrogencarbonate (HCO3) in surface water
+Mercury,I7064_38,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Mercury (Hg) in surface water
+Potassium,I7064_39,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Potassium (K) in surface water
+Magnesium,I7064_40,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Magnesium (Mg) in surface water
+Manganese,I7064_41,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Manganese (Mn) in surface water
+Ammonia,I7064_42,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Ammonia (NH3) in surface water
+Nitrate and nitrite,I7064_43,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Nitrate and nitrite (NO2+NO3) in surface water
+Nitrate,I7064_44,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Nitrate (NO3) in surface water
+Nitrate-Nitrogen,I7064_45,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Nitrate-Nitrogen (NO3-N) in surface water
+Sodium,I7064_46,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Sodium (Na) in surface water
+sodium,I7064_47,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Sodium (Na) in surface water
+Nickel,I7064_48,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Nickel (Ni) in surface water
+Amount of Organic-N,I7064_50,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Organic-N in surface water
+Lead,I7064_51,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Lead (Pb) in surface water
+Phenols,I7064_52,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Phenols in surface water
+Phosphorus-Tot,I7064_53,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Phosphorus-Tot in surface water
+Residual Sodium Carbonate,I7064_54,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Residual Sodium Carbonate in surface water
+Sodium absorption ratio,I7064_55,Numeric Variable,Ratio,1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Sodium absorption ratio (SAR) in surface water
+Amount of Sulfate,I7064_56,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Sulfate (SO4) in surface water
+Selenium,I7064_57,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Selenium (Se) in surface water
+Secchi,I7064_58,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Secchi in surface water
+Silicon dioxide,I7064_59,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Silicon dioxide (SiO2) in surface water
+Silicate,I7064_60,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Silicate (SiO3) in surface water
+Suspended Solids,I7064_61,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Suspended Solids in surface water
+Alkalinity Total,I7064_62,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Alkalinity Total in surface water
+Temperature,I7064_63,Numeric Variable,°C ( Centigrade ),1,max,Not Applicable,Not Applicable,Temperature (Temp) in surface water
+Total Coliform Organism,I7064_64,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Total Coliform Organism in surface water
+Total Dissolved Solids,I7064_65,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Total Dissolved Solids in surface water
+Total Organic Carbon,I7064_66,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Total Organic Carbon in surface water
+Total Solids,I7064_67,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Total Solids in surface water
+Turbidity,I7064_68,Numeric Variable,NTU ( Nephelometric Turbidity Unit ),1,max,Not Applicable,Not Applicable,Turbidity in surface water
+Zinc,I7064_69,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census, Zinc (Zn) in surface water
+Benzene hexachloride,I7064_70,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Benzene hexachloride in surface water
+Orthophosphate,I7064_71,Numeric Variable,% ( Percentage ),1,weighted avg,WeighingRatio_Percentage_LandArea,Land Area from Census,Orthophosphate in surface water
+Hydrogen,I7064_72,Numeric Variable,pH,1,max,Not Applicable,Not Applicable,Potential of Hydrogen (pH) in surface water
+Potential of Hydrogen FLD,I7064_73,Numeric Variable,pH,1,max,Not Applicable,Not Applicable,Potential of Hydrogen FLD (pH_FLD) in surface water
