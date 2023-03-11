@@ -1,0 +1,7 @@
+The three plots are related to each other in the sense that they all provide information about the goodness of fit of the model. The first scatter plot shows the overall relationship between the dependent and independent variables and gives an idea of the direction and strength of the relationship. The second scatter plot shows how well the model captures the variation in the dependent variable that is not explained by the independent variable. The third scatter plot shows how well the model predicts the actual values of the dependent variable.
+
+If the model is a good fit, we would expect to see a random scatter of residuals around the fitted line in the first and second plots, and a tight cluster of points around the diagonal line in the third plot. If there is a systematic pattern in the residuals or a wide scatter of points around the diagonal line, it suggests that the model may not be a good fit and may need to be revised.
+
+
+
+
