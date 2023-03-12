@@ -15,7 +15,6 @@ ds <- select(ds, -Surface.Water.Station.Longitude)
 ds <- select(ds, -SourceMonth)
 ds$District = gsub("-", " ", as.character(ds$District))
 
-
 # Dropping Entries with NA SourceYear or District
 ds <- ds[!is.na(ds$SourceYear),]
 ds <- ds[!is.na(ds$District),]
@@ -23,6 +22,7 @@ ds <- ds[!is.na(ds$District),]
 dyid <- paste(ds$SourceYear,ds$District,sep="_")
 ds = cbind(dyid, ds)
 ds[, c(6:50)] <- sapply(ds[, c(6:50)], as.numeric)
+
 
 # Mean of observations (Done)
 ds2 <- aggregate(ds[,6:50],by = list(ds$dyid),FUN=mean, na.rm=TRUE)
@@ -34,7 +34,7 @@ rm(ds2)
 #View(ds)
 
 
-# Modifing Dataset with the Net State Domestic Product (SDP)
+# Modifying Dataset with the Net State Domestic Product (SDP)
 # Base Year Correction ??
 dd = data.frame(SourceYear = c(NA), State = c(NA), SDP = c(NA))
 
@@ -48,7 +48,7 @@ for (i in 1:23){
 }
 
 dd <- dd[!is.na(dd$State),]
-
+# View(dd)
 rm(ds_SDP);rm(j);rm(i);
 
 # Merging the two datasets
@@ -72,6 +72,7 @@ colnames(merged_dataset)[10] <- "SourceYear"
 merged_dataset = merged_dataset[,c(2,3,4,1,5:ncol(merged_dataset))]
 
 rm(dd);rm(ds);rm(dyid);rm(syid);
+# View(merged_dataset)
 
 mohanty <- read.csv("./Mohanty et. al. 2016.csv", encoding = "UTF-8")
 mohanty <- mohanty[!is.na(mohanty$Gini.Index),]
@@ -88,7 +89,12 @@ merged_dataset = merge(x = mohanty, y = merged_dataset, by = "District", all.y =
 merged_dataset <- select(merged_dataset, -Sr.No.)
 merged_dataset = merged_dataset[,c(3,4,5,1,6,2,7:ncol(merged_dataset))]
 rm(mohanty)
-# Detailed Summary of Variables
+
+# Saving the datasheet in csv format
+write.table(merged_dataset, file = "group_10.csv", sep = ",", row.names = F)
+View(merged_dataset)
+
+# 5) Detailed Summary of Variables
 
 # Dichlorophenoxyacetic Acid
 # No variation in dataset thereby dropping the parameter
@@ -126,48 +132,57 @@ rm(mohanty)
 #temp_ds = merged_dataset[!is.na(merged_dataset$Cadimum),]
 #View(temp_ds)
 
+# Incomplete
+Analysis <- function(cname){
+  temp <- merged_dataset[!is.nan(merged_dataset$cname)]
+  print(mean(merged_dataset$cnmae))
+  
+  rm(temp)
+}
+
+for(i in 8:52){
+  # For every column of merged_dataset
+  Analysis(colnames(merged_dataset)[i])
+}
+
 mds <- merged_dataset[!is.na(merged_dataset$Biochemical.Oxygen.Demand),]
 mds <- mds[!is.na(mds$SDP),]
 
-# Filtering out district AKOLA from dataset and comparing its SDP with BOD
-mds <- filter(mds, mds$District == "AKOLA")
+#View(mds)
 SDP <- as.numeric(mds$SDP)
 EQI <- as.numeric(mds$Biochemical.Oxygen.Demand)
 
-# Summary of the regression model
+# 6) Summary of the regression model
 reg_model = lm(EQI ~ SDP)
 summary(reg_model)
 
 #View(merged_dataset)
 
-# Formating of Plots
+# 7) Formatting of Plots
 par(mfrow=c(3,1))
-
-# EQI vs SDP (PLot 1)
+# EQI vs SDP (Plot 1)
 plot(EQI ~ SDP, col = "red", main='EQI vs SDP', xlab='SDP', ylab='EQI')
-abline(lm(EQI ~ SDP),col='red')
+abline(lm(EQI ~ SDP),col='purple')
 
 # Residual vs SDP
 plot(reg_model$residuals ~ SDP , col = 'blue', main='Residual vs SDP', xlab='SDP', ylab='Residual')
-abline(lm(reg_model$residuals ~ SDP),col='blue')
+abline(lm(reg_model$residuals ~ SDP),col='purple')
 
 # True vs Predicted
 plot(reg_model$fitted.values ~ EQI, col = 'green',main='True vs Predicted', xlab='True Value', ylab='Predicted Value')
-abline(lm(reg_model$fitted.values ~ EQI),col='green')
+abline(lm(reg_model$fitted.values ~ EQI),col='purple')
 
-# Histogram of residuals
-
+# 8) Histogram of residuals
+windows()
 hist(reg_model$residuals,main="Histogram of Residuals", xlab = 'Residuals')
-
 paste("Sum of Residuals:", round(sum(reg_model$residuals), 4))
 
-View(mds)
-# Final estimating Model
+#View(mds)
+# 9) Final estimating Model
 SDP1 <- SDP
 SDP2 <- SDP * SDP
 SDP3 <- SDP * SDP * SDP
 GINI <- as.numeric(mds$Gini.Index)
-
 reg_model_1 = lm(EQI ~ SDP1 + SDP2 + SDP3 + GINI)
 summary(reg_model_1)
 
