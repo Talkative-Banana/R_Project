@@ -35,7 +35,7 @@ rm(ds2)
 
 
 # Modifying Dataset with the Net State Domestic Product (SDP)
-# Base Year Correction ??
+# Base Year Correction?? (No need Clarified)
 dd = data.frame(SourceYear = c(NA), State = c(NA), SDP = c(NA))
 
 for (i in 1:23){
@@ -95,55 +95,20 @@ write.table(merged_dataset, file = "group_10.csv", sep = ",", row.names = F)
 View(merged_dataset)
 
 # 5) Detailed Summary of Variables
-
-# Dichlorophenoxyacetic Acid
-# No variation in dataset thereby dropping the parameter
-#temp_ds = merged_dataset[!is.na(merged_dataset$Dichlorophenoxyacetic.acid),]
-#merged_dataset <- select(merged_dataset, -Dichlorophenoxyacetic.acid)
-
-# Silver
-# Very liitle variation in dataset thereby dropping the parameter
-#temp_ds = merged_dataset[!is.na(merged_dataset$Silver),]
-#merged_dataset <- select(merged_dataset, -Silver)
-
-# Aluminium
-
-# Aldrin
-
-# Alkalinity Phenolphthalein
-
-# Arsenic
-
-# Boron
-
-# Biochemical Oxygen Demand
-
-# Cyanide
-# No variation in dataset thereby dropping the parameter
-#temp_ds = merged_dataset[!is.na(merged_dataset$cyanides),]
-#merged_dataset <- select(merged_dataset, -cyanides)
-
-# Carbonate
-
-# Calcium
-
-# Cadmium
-
-#temp_ds = merged_dataset[!is.na(merged_dataset$Cadimum),]
-#View(temp_ds)
-
 # Incomplete
-Analysis <- function(cname){
-  temp <- merged_dataset[!is.nan(merged_dataset$cname)]
-  print(mean(merged_dataset$cnmae))
-  
+Analysis <- function(dname){
+  temp <- dname
+  print(summary(temp))
+  for(col in 8:ncol(temp)){
+    hist(temp[, as.numeric(col)], xlab = colnames(temp)[col], main = paste0("Histogram of ", colnames(temp)[col]))
+    boxplot(temp[, as.numeric(col)], xlab = colnames(temp)[col], main = paste0("BoxPlot of ", colnames(temp)[col]))
+    without_outliers <- temp[!temp %in% boxplot.stats(temp[, as.numeric(col)])$out]
+    print(length(temp) - length(without_outliers))
+  }
   rm(temp)
 }
 
-for(i in 8:52){
-  # For every column of merged_dataset
-  Analysis(colnames(merged_dataset)[i])
-}
+Analysis(merged_dataset)
 
 mds <- merged_dataset[!is.na(merged_dataset$Biochemical.Oxygen.Demand),]
 mds <- mds[!is.na(mds$SDP),]
